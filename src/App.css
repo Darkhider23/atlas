@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0;
+    font-family:  'PT- Sans', sans-serif;
+}
+
+.home,
+.login,
+.list-carwash,
+.aboutus{
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-style: 3rem;
+}
+
+.login{
+ background-color: aquamarine;
+ color:#fff;
+ font-size: 100px;
+}
