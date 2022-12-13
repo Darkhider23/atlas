@@ -1,39 +1,31 @@
 
 import './App.css';
-import { BrowserRouter  as Router,Routes,Route} from 'react-router-dom';
+import { Routes,Route} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './components/pages/Home';
 import ListCarWash from './components/pages/ListCarwash';
 import About from './components/pages/About';
+import RegisterCarWash from './components/pages/RegisterCarWash';
+import Login from './components/pages/Login';
+
 
 function App() {
-  let component
-  // eslint-disable-next-line default-case
-  switch(window.location.pathname){
-    case "/":
-      component = <Home/>
-      break
-    case "/home":
-      component = <Home/>
-      break
-    case "/about":
-      component = <About/>
-      break
-    case "/list-carwash":
-      component = <ListCarWash/>
-      break
-
-  }
+  
   return(
-  <>
-  <Router>
+    <>
     <NavBar/>
-    <Routes>
-      <Route path='/' exact/>
-    </Routes>
-  </Router>
-  </>
-  );
+    <div className='container'>
+      <Routes>
+        <Route path='/' element = {<Home/>}/>
+        <Route path='/list-carwash' element = {<ListCarWash/>}/>
+        <Route path='/register-carwash' element = {<RegisterCarWash/>}/>
+        <Route path='/login' element = {<Login/>}/>
+        <Route path='/about' element = {<About/>}/>
+      </Routes>
+    </div>
+    </>
+  )
+
 }
 
 export default App;

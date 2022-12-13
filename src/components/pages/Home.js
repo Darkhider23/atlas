@@ -1,14 +1,11 @@
 import React from "react";
+import '../../App.css';
 
 function Home(){
     return (
-        <div className="container">
-            <div className="card mt-4">
-                <div className="card-body">
-                    <h2>Home</h2>
-                </div>
-            </div>
-        </div>
+        <>
+        <h1>Home</h1>
+        </>
     )
 }
 
