@@ -23,7 +23,7 @@ function Footer() {
                     <i className='fa-brands fa-instagram'></i>
                 </a>
                 <a href="https://www.google.com/maps">
-                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                <i className="fa-sharp fa-solid fa-location-dot"></i>
                 </a>
             </div>
             </div>

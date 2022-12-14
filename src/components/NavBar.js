@@ -32,7 +32,12 @@ function NavBar() {
    <nav className='navbar'>
     <div className='navbar-container'>
         <Link to="/home" className="navbar-logo">
-        CarWash <i className="fab fa-typo3"/>
+          <h2 className="first-word">
+            Top
+          </h2>
+          <h2 className="second-word">
+           Wash 
+          </h2>
         </Link>
         {/* <div className="menu-icon" onClick={handleClick}>
           <i className={click ? 'fas fa-times': 'fas fa-bars'}></i>
