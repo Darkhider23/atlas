@@ -29,7 +29,7 @@ function NavBar() {
 
   return (
    <>
-   <nav className='navbar'>
+   <nav className='navbar-home'>
     <div className='navbar-container'>
         <Link to="/home" className="navbar-logo">
           <h2 className="first-word">
