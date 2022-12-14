@@ -1,14 +1,13 @@
 import React from "react";
+import './Home.css'
 
-function Home(){
+function Home() {
     return (
-        <div className="container">
-            <div className="card mt-4">
-                <div className="card-body">
+        <>
+                <div className="home-container">
                     <h2>Home</h2>
                 </div>
-            </div>
-        </div>
+        </>
     )
 }
 

@@ -29,14 +29,19 @@ function NavBar() {
 
   return (
    <>
-   <nav className='navbar'>
+   <nav className='navbar-home'>
     <div className='navbar-container'>
-        <Link to="/" className="navbar-logo">
-        CarWash <i className="fab fa-typo3"/>
+        <Link to="/home" className="navbar-logo">
+          <h2 className="first-word">
+            Top
+          </h2>
+          <h2 className="second-word">
+           Wash 
+          </h2>
         </Link>
-        <div className="menu-icon" onClick={handleClick}>
+        {/* <div className="menu-icon" onClick={handleClick}>
           <i className={click ? 'fas fa-times': 'fas fa-bars'}></i>
-        </div>
+        </div> */}
         <ul className={click ? 'nav-menu active': 'nav-menu'}>
           <li className='nav-item'>
             <Link to ='/home' className='nav-links' onClick={closeMobileMenu}>
@@ -46,6 +51,11 @@ function NavBar() {
           <li className='nav-item'>
             <Link to ='/list-carwash' className='nav-links' onClick={closeMobileMenu}>
               List CarWash
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to ='/register-carwash' className='nav-links' onClick={closeMobileMenu}>
+              Register CarWash
             </Link>
           </li>
           <li className='nav-item'>
