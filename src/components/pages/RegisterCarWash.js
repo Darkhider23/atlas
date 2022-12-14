@@ -2,12 +2,8 @@ import React from "react";
 
 function RegisterCarWash(){
     return (
-        <div className="container">
-            <div className="card mt-4">
-                <div className="card-body">
-                    <h2>RegisterCarWash</h2>
-                </div>
-            </div>
+        <div className="register-container">
+            <h2>Register Car Wash</h2>
         </div>
     )
 }

@@ -7,6 +7,7 @@ import ListCarWash from './components/pages/ListCarwash';
 import About from './components/pages/About';
 import RegisterCarWash from './components/pages/RegisterCarWash';
 import Login from './components/pages/Login';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -14,15 +15,17 @@ function App() {
   return(
     <>
     <NavBar/>
-    <div className='container'>
+    <div className='page-container'>
       <Routes>
         <Route path='/' element = {<Home/>}/>
+        <Route path='/home' element = {<Home/>}/>
         <Route path='/list-carwash' element = {<ListCarWash/>}/>
         <Route path='/register-carwash' element = {<RegisterCarWash/>}/>
         <Route path='/login' element = {<Login/>}/>
         <Route path='/about' element = {<About/>}/>
       </Routes>
     </div>
+    <Footer/>
     </>
   )
 

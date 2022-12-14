@@ -34,9 +34,9 @@ function NavBar() {
         <Link to="/home" className="navbar-logo">
         CarWash <i className="fab fa-typo3"/>
         </Link>
-        <div className="menu-icon" onClick={handleClick}>
+        {/* <div className="menu-icon" onClick={handleClick}>
           <i className={click ? 'fas fa-times': 'fas fa-bars'}></i>
-        </div>
+        </div> */}
         <ul className={click ? 'nav-menu active': 'nav-menu'}>
           <li className='nav-item'>
             <Link to ='/home' className='nav-links' onClick={closeMobileMenu}>

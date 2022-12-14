@@ -1,10 +1,12 @@
 import React from "react";
-import '../../App.css';
+import './Home.css'
 
-function Home(){
+function Home() {
     return (
         <>
-        <h1>Home</h1>
+                <div className="home-container">
+                    <h2>Home</h2>
+                </div>
         </>
     )
 }
