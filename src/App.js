@@ -8,7 +8,8 @@ import About from './components/pages/About';
 import RegisterCarWash from './components/pages/RegisterCarWash';
 import Login from './components/pages/Login';
 import Footer from './components/Footer';
-import CarWashList from './components/pages/CarWashList';
+import CarWashList from './components/PageComponents/CarWashList';
+
 
 
 function App() {
