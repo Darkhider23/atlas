@@ -1,14 +1,10 @@
 import React, {useState} from 'react'
-import {Link, useNavigate} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import { Button } from './Button'
 import './Navbar.css';
 
 function NavBar() {
-  const navigate = useNavigate();
-
-  const navigateLogin = () =>{
-        navigate('/home')
-    }
+ 
 
   const [click,setClick] = useState(false);
 
@@ -63,8 +59,13 @@ function NavBar() {
               About Us
             </Link>
           </li>
+          <li className='nav-item'>
+            <Link to ='/login' className='nav-links' onClick={closeMobileMenu}>
+              Login
+            </Link>
+          </li>
           </ul>
-          {button && <Button onClick={navigateLogin} buttonStyle='btn--outline'>Login</Button>}
+          {/* {button && <Button onClick={navigateLogin} buttonStyle='btn--outline'>Login</Button>} */}
     </div>
    </nav>
    </>
