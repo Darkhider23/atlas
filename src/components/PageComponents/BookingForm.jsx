@@ -1,20 +1,20 @@
-import React from 'react';
-import { Form, FormGroup, FormLabel, Button } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Form, FormGroup, FormLabel, Button, FormControl} from 'react-bootstrap';
 //import { KeyboardDatePicker } from '@material-ui/pickers';
-//mport { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
-  root: {
-    width: 200,
-  },
-});
+// const useStyles = makeStyles({
+//   root: {
+//     width: 200,
+//   },
+// });
 
 function BookingForm({ carWash, handleCancelClick, handleBookingFormSubmit }) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [date, setDate] = useState(null);
   const [time, setTime] = useState(null);
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
     <Form onSubmit={handleBookingFormSubmit}>
