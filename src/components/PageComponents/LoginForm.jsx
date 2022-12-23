@@ -1,41 +1,50 @@
-import { React, useState } from 'react'
-import { Form, FormGroup, FormLabel, Button, FormControl } from 'react-bootstrap'
-
-// const useStyles = makesStyles({
-//     root: {
-//         width: 200,
-//     },
-// });
+import { React, useState, useEffect } from 'react'
+// import { Form, FormGroup, FormLabel, Button, FormControl } from 'react-bootstrap'
+import {Form,Input} from 'antd';
 
 function LoginForm({ user, handleCancelClick, handleLoginfromSubmit }) {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [data, setData] = useState({
+        email: '',
+        password: ''
+    });
 
+    const handleChange = e => {
+        const { name, value } = e.target;
+        setData(prevData => ({
+            ...prevData,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = e => {
+        console.log(data);
+        e.preventDefault();
+        setSuccess(true);
+;        
+    }
     return (
-        <Form onSubmit={handleLoginfromSubmit}>
-            <FormGroup>
-                <FormLabel for="email">Email</FormLabel>
-                <FormControl
+        <Form onSubmit={handleSubmit}>
+            <Form.Item label="Email">
+                <Input
                     type="email"
                     name="email"
-                    id="email"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
+                    value={data.email}
+                    onChange={handleChange}
                     required
                 />
-            </FormGroup>
-            <FormGroup>
-                <FormLabel for="password">Password</FormLabel>
-                <FormControl
+            </Form.Item>
+            <Form.Item label="Password">
+                <Input
                     type="password"
                     name="password"
-                    id="password"
-                    value={password}
-                    onChange={e => setPassword(e.target.value)}
+                    value={data.password}
+                    onChange={handleChange}
                     required
                 />
-            </FormGroup>
-            <Button type="submit" disabled={!email || !password}>Login</Button>
+            </Form.Item>
+            <Form.Item>
+            <button type="submit">Login</button>
+            </Form.Item>
         </Form>
     );
 }
